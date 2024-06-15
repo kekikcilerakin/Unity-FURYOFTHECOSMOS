@@ -13,45 +13,40 @@ MonoBehaviour:
   m_Name: Bloom
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
-  threshold:
-    m_OverrideState: 1
-    m_Value: 1
-    min: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 1
-    min: 0
-  scatter:
-    m_OverrideState: 0
-    m_Value: 0.7
-    min: 0
-    max: 1
-  clamp:
-    m_OverrideState: 0
-    m_Value: 65472
-    min: 0
-  tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
-  highQualityFiltering:
-    m_OverrideState: 0
-    m_Value: 0
   skipIterations:
     m_OverrideState: 0
     m_Value: 1
-    min: 0
-    max: 16
+  threshold:
+    m_OverrideState: 1
+    m_Value: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  downscale:
+    m_OverrideState: 0
+    m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
   dirtTexture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
+    dimension: 1
   dirtIntensity:
     m_OverrideState: 0
     m_Value: 0
-    min: 0
 --- !u!114 &-7011558710299706105
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -65,26 +60,18 @@ MonoBehaviour:
   m_Name: Vignette
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   color:
     m_OverrideState: 0
     m_Value: {r: 0, g: 0, b: 0, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
   center:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
     m_Value: 0.25
-    min: 0
-    max: 1
   smoothness:
     m_OverrideState: 1
     m_Value: 0.4
-    min: 0.01
-    max: 1
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -104,6 +91,7 @@ MonoBehaviour:
   - {fileID: 849379129802519247}
   - {fileID: -7893295128165547882}
   - {fileID: -7011558710299706105}
+  - {fileID: 3818926206690824108}
 --- !u!114 &849379129802519247
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -117,7 +105,121 @@ MonoBehaviour:
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
     m_Value: 1
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 0
+    m_Value: 3
+  hueShiftAmount:
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 0
+    m_Value: 1000
+--- !u!114 &3818926206690824108
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2303f781f6c04e428d9eb352fa4be37e, type: 3}
+  m_Name: OutlineVol
+  m_EditorClassIdentifier: 
+  active: 1
+  m_Sensitive:
+    m_OverrideState: 1
+    m_Value: 0.1448
+  m_Thickness:
+    m_OverrideState: 1
+    m_Value: 0.569
+  m_Color:
+    m_OverrideState: 1
+    m_Value:
+      _grad:
+        serializedVersion: 2
+        key0: {r: 1, g: 0, b: 0, a: 0}
+        key1: {r: 0, g: 1, b: 0.060156345, a: 0}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 0
+        m_ColorSpace: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      _pixels:
+      - {r: 1, g: 0, b: 0, a: 0}
+      - {r: 0.96774197, g: 0.032258064, b: 0.0019405272, a: 0}
+      - {r: 0.9354839, g: 0.06451613, b: 0.0038810545, a: 0}
+      - {r: 0.9032258, g: 0.09677419, b: 0.0058215815, a: 0}
+      - {r: 0.87096775, g: 0.12903225, b: 0.007762109, a: 0}
+      - {r: 0.8387097, g: 0.16129032, b: 0.009702636, a: 0}
+      - {r: 0.8064516, g: 0.19354838, b: 0.011643163, a: 0}
+      - {r: 0.7741935, g: 0.22580644, b: 0.013583691, a: 0}
+      - {r: 0.7419355, g: 0.2580645, b: 0.015524218, a: 0}
+      - {r: 0.70967746, g: 0.29032257, b: 0.017464746, a: 0}
+      - {r: 0.67741936, g: 0.32258064, b: 0.019405272, a: 0}
+      - {r: 0.6451613, g: 0.3548387, b: 0.0213458, a: 0}
+      - {r: 0.61290324, g: 0.38709676, b: 0.023286326, a: 0}
+      - {r: 0.5806452, g: 0.41935483, b: 0.025226854, a: 0}
+      - {r: 0.5483871, g: 0.4516129, b: 0.027167382, a: 0}
+      - {r: 0.516129, g: 0.48387095, b: 0.029107908, a: 0}
+      - {r: 0.48387098, g: 0.516129, b: 0.031048436, a: 0}
+      - {r: 0.4516129, g: 0.5483871, b: 0.032988966, a: 0}
+      - {r: 0.41935486, g: 0.58064514, b: 0.03492949, a: 0}
+      - {r: 0.38709676, g: 0.61290324, b: 0.036870018, a: 0}
+      - {r: 0.35483873, g: 0.6451613, b: 0.038810544, a: 0}
+      - {r: 0.32258064, g: 0.67741936, b: 0.040751074, a: 0}
+      - {r: 0.2903226, g: 0.7096774, b: 0.0426916, a: 0}
+      - {r: 0.2580645, g: 0.7419355, b: 0.04463213, a: 0}
+      - {r: 0.22580647, g: 0.7741935, b: 0.04657265, a: 0}
+      - {r: 0.19354838, g: 0.8064516, b: 0.04851318, a: 0}
+      - {r: 0.16129035, g: 0.83870965, b: 0.050453708, a: 0}
+      - {r: 0.12903225, g: 0.87096775, b: 0.052394237, a: 0}
+      - {r: 0.09677422, g: 0.9032258, b: 0.054334763, a: 0}
+      - {r: 0.06451613, g: 0.9354839, b: 0.05627529, a: 0}
+      - {r: 0.032258093, g: 0.9677419, b: 0.058215816, a: 0}
+      - {r: 0, g: 1, b: 0.060156345, a: 0}
+  m_Fill:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 0}
+  m_Mode:
+    m_OverrideState: 1
+    m_Value: 0
