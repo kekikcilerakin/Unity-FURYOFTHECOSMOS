@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        HandleRotate();
+        //HandleRotate();
     }
 
     private void HandleRotate()
