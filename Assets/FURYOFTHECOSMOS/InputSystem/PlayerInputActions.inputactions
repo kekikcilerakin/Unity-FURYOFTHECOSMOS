@@ -44,7 +44,7 @@
             ],
             "bindings": [
                 {
-                    "name": "WSAD",
+                    "name": "WASD",
                     "id": "58cb7bca-2f16-46f7-88a1-c77bcae978b1",
                     "path": "2DVector",
                     "interactions": "",
@@ -66,9 +66,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "down",
-                    "id": "c459ea9c-7e40-425d-9fed-cb3baac5afa9",
-                    "path": "<Keyboard>/s",
+                    "name": "left",
+                    "id": "4185f61c-c594-4f75-8992-cf8c200762a9",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -77,9 +77,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "left",
-                    "id": "4185f61c-c594-4f75-8992-cf8c200762a9",
-                    "path": "<Keyboard>/a",
+                    "name": "down",
+                    "id": "c459ea9c-7e40-425d-9fed-cb3baac5afa9",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
