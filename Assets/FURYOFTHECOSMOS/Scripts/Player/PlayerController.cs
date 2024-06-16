@@ -6,8 +6,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController characterController;
 
-    [SerializeField] private float walkSpeed = 1.8f;
-    [SerializeField] private float runSpeed = 4.5f;
+    [SerializeField] private float moveSpeed = 4.5f;
 
     #region Constant Variables
     private const float Gravity = -9.81f;
@@ -41,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMove()
     {
-        float targetSpeed = InputManager.Instance.Run ? runSpeed : walkSpeed;
+        float targetSpeed = moveSpeed;
         if (InputManager.Instance.Move == Vector2.zero) targetSpeed = 0.0f;
 
         AccelerateSpeed(targetSpeed);
@@ -85,7 +84,6 @@ public class PlayerController : MonoBehaviour
 
         float moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
 
-        if (InputManager.Instance.Run) return moveAmount *= 2f;
-        else return moveAmount;
+        return moveAmount;
     }
 }

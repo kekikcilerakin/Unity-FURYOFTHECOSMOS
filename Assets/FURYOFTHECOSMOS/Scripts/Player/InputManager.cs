@@ -9,7 +9,6 @@ public class InputManager : MonoBehaviour
 
     public Vector2 Move { get; private set; }
     public Vector2 Look { get; private set; }
-    public bool Run { get; private set; }
 
     private void Awake()
     {
@@ -19,9 +18,6 @@ public class InputManager : MonoBehaviour
 
         inputActions.Player.Move.performed += OnMove;
         inputActions.Player.Look.performed += OnLook;
-
-        inputActions.Player.Run.performed += OnRun;
-        inputActions.Player.Run.canceled += OnRun;
     }
 
     private void OnEnable()
@@ -43,14 +39,10 @@ public class InputManager : MonoBehaviour
     {
         Look = context.ReadValue<Vector2>();
     }
-
-    private void OnRun(InputAction.CallbackContext context)
-    {
-        Run = context.ReadValueAsButton();
-    }
     
     public void DisableMovement()
     {
+        Debug.Log("Disabled");
         Move = Vector2.zero;
         Look = Vector2.zero;
         inputActions.Player.Look.Disable();
@@ -59,6 +51,7 @@ public class InputManager : MonoBehaviour
 
     public void EnableMovement()
     {
+        Debug.Log("Enabled");
         inputActions.Player.Look.Enable();
         inputActions.Player.Move.Enable();
     }
