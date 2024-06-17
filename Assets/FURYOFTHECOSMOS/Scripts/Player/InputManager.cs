@@ -42,7 +42,6 @@ public class InputManager : MonoBehaviour
     
     public void DisableMovement()
     {
-        Debug.Log("Disabled");
         Move = Vector2.zero;
         Look = Vector2.zero;
         inputActions.Player.Look.Disable();
@@ -51,7 +50,6 @@ public class InputManager : MonoBehaviour
 
     public void EnableMovement()
     {
-        Debug.Log("Enabled");
         inputActions.Player.Look.Enable();
         inputActions.Player.Move.Enable();
     }

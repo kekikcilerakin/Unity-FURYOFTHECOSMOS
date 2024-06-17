@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ChargeForward : MonoBehaviour
+public class ComboAnimationTriggerManager : MonoBehaviour
 {
     public Transform playerTransform;
     public float chargeDistance = 2.0f; // Distance to charge forward during an attack
